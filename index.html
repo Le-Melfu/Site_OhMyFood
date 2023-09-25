@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
     <!-- Header du site avec la localisation -->
     <header>
         <div class="header__logo">
@@ -24,14 +24,14 @@
             <p>Paris, Belleville</p>
         </div>
     </header>
-    
+
     <main>
         <!-- Intro du site avec le raccourcis vers les restaurants et le fonctionnement du site -->
         <section class="intro">
             <div class="intro__content">
                 <h1 class="section-title">Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <a class="intro__btn" href="#restaurant__anchor">Explorer nos restaurants</a>
+                <a class="btn" href="#restaurant__anchor">Explorer nos restaurants</a>
             </div>
             <div class="intro_site-function">
                 <h1 class="section-title">Fonctionnement</h1>
@@ -49,41 +49,48 @@
         <section class="restaurant" id="restaurant__anchor">
             <h1 class="section-title">Restaurants</h1>
             <div class="restaurant__list">
-                <article class="card">
-                    <img src="./assets/images/restaurants/palette_du_goût.jpg" alt="Assiette de salade de saumon et germes de poireaux">
-                    <div>
-                        <h2 class="card__title">La palette du goût</h2>
-                        <p>Ménilmontant</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="./assets/images/restaurants/note_enchantee.jpg" alt="Assiette d'un plat de poulet aux épices">
-                    <div>
-                        <h2 class="card__title">La note enchantée</h2>
-                        <p>Charonne</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="./assets/images/restaurants/a_la_francaise.jpg" alt="Assiette de dessert glacé et crème anglaise">
-                    <div>
-                        <h2 class="card__title">À la française</h2>
-                        <p>Cité Rouge</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="./assets/images/restaurants/palette_du_goût.jpg" alt="Plat de poisson et poivrons">
-                    <div>
-                        <h2 class="card__title">Le délice des sens</h2>
-                        <p>Folie-Méricourt</p>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </article>
+                <a href="./restaurants/la_palette_du_gout.html">
+                    <article class="card">
+                        <img src="./assets/images/restaurants/palette_du_goût.jpg" alt="Assiette de salade de saumon et germes de poireaux">
+                        <div>
+                            <h2 class="card__title">La palette du goût</h2>
+                            <p>Ménilmontant</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </article>>
+                </a>
+                <a href="./restaurants/la_note_enchantee.html">
+                    <article class="card">
+                        <img src="./assets/images/restaurants/note_enchantee.jpg" alt="Assiette d'un plat de poulet aux épices">
+                        <div>
+                            <h2 class="card__title">La note enchantée</h2>
+                            <p>Charonne</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </article>
+                </a>
+                <a href="./restaurants/a_la_francaise.html">
+                    <article class="card">
+                        <img src="./assets/images/restaurants/a_la_francaise.jpg" alt="Assiette de dessert glacé et crème anglaise">
+                        <div>
+                            <h2 class="card__title">À la française</h2>
+                            <p>Cité Rouge</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </article>
+                </a>
+                <a href="./restaurants/le_delice_des_sens.html">
+                    <article class="card">
+                        <img src="./assets/images/restaurants/delice_des_sens.jpg" alt="Plat de poisson et poivrons">
+                        <div>
+                            <h2 class="card__title">Le délice des sens</h2>
+                            <p>Folie-Méricourt</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </article>
+                </a>    
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->

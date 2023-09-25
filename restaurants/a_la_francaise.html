@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="description" content="Site de Restauration OhMyFood">
+    <title>Oh My Food</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/styles/css/main.css'>
+    <link rel="shortcut icon" href="./assets/images/icon/icon_restaurant.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/49469fa42f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header du site avec la localisation -->
+    <header>
+        <div class="header__logo">
+            <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
+        </div>
+    </header>
+
+    <main>
+        <img class="restaurant__image" src="../assets/images/restaurants/a_la_francaise.jpg" alt="Assiette de dessert glacé et crème anglaise">
+        <div class="menu">
+            <div>
+                <h1 class="restaurant__name">À la française</h1>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        
+            <form method="post" action="#">
+                
+                <!-- Entrées -->
+                <section class="entrees">
+                    <h2 class="menu__title">Entrées</h2>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Tartare de poulpe acidulé</h3>
+                            <p class="menu__content">
+                                <label for="tartare">
+                                    Aux zestes d'orange <span class="price">25€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="tartare" id="tartare">
+                    </article>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Velouté de légumes d'antan</h3>
+                            <p class="menu__content">
+                                <label for="veloute">
+                                    Carotte, panais, topinambour<span class="price">35€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="veloute" id="veloute">
+                    </article>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Soupe à l'oignon</h3>
+                            <p class="menu__content">
+                                <label for="oignon-soup">
+                                    Revisitée<span class="price">20€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="oignon-soup" id="oignon-soup">
+                    </article>
+                </section>
+                
+                <!-- Plats -->
+                <section class="plats">
+                    <h2 class="menu__title">Plats</h2>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Coquilles Saint-Jacques</h3>
+                            <p class="menu__content">
+                                <label for="st-jacques">
+                                    Accompagnées d'une purée de panais<span class="price">40€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="st-jacques" id="st-jacques">
+                    </article>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Magret de canard</h3>
+                            <p class="menu__content">
+                                <label for="magret">
+                                    Et parmentier de pommes de terre<span class="price">35€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="magret" id="magret">
+                    </article>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Pigeonneau d’Ille-et-Vilaine</h3>
+                            <p class="menu__content">
+                                <label for="pigeonneau">
+                                    Sur son lit de gnocchis aux légumes<span class="price">44€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="pigeonneau" id="pigeonneau">
+                    </article>
+                </section>
+                
+                <!-- Desserts -->
+                <section class="desserts">
+                    <h2 class="menu__title">Desserts</h2>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Pétales de violettes glacés</h3>
+                            <p class="menu__content">
+                                <label for="violette">
+                                    Et purée de noisettes<span class="price">18€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="violette" id="violette">
+                    </article>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Fondant au chocolat</h3>
+                            <p class="menu__content">
+                                <label for="fondant-choco">
+                                    Revisité<span class="price">22€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="fondant-choco" id="fondant-choco">
+                    </article>
+                    <article class="card">
+                        <div>
+                            <h3 class="menu__subtitle">Millefeuille croustillant</h3>
+                            <p class="menu__content">
+                                <label for="millefeuille">
+                                    Myrtilles et pâte d’amande<span class="price">23€</span>
+                                </label>
+                            </p>
+                        </div>
+                        <input type="checkbox" name="millefeuille" id="millefeuille">
+                    </article>
+                </section>
+                <button class="btn" type="button">Commander</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img class="footer__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
+        <div class="footer__content">
+            <ul>
+                <li><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+                <li><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
