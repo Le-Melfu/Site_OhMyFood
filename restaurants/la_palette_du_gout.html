@@ -14,18 +14,19 @@
 </head>
 
 <body>
-    <!-- Header du site avec la localisation -->
+    <!-- Header du site -->
     <header>
         <div class="header__logo">
-            <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
             <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
         </div>
     </header>
 
+    <!-- Contenu principal -->
     <main>
         <img class="restaurant__image" src="../assets/images/restaurants/palette_du_goût.jpg" alt="Assiette de salade de saumon et germes de poireaux">
         <div class="menu">
-            <div>
+            <div class="restaurant__header">
                 <h1 class="restaurant__name">La palette du goût</h1>
                 <i class="fa-regular fa-heart"></i>
             </div>
@@ -36,7 +37,7 @@
                 <section class="entrees">
                     <h3 class="menu__title">Entrées</h3>
                     <article class="card">
-                        <div>
+                        <div class="card__text-content">
                             <h4 class="menu__subtitle">Tartare de poulpe acidulé</h4>
                             <p class="menu__content">
                                 <label for="tartare">
@@ -152,8 +153,8 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p><span class="footer__logo">ohmyfood</span></p>
         <div class="footer__content">
+            <span class="footer__logo">ohmyfood</span>
             <ul>
                 <li><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
                 <li><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
