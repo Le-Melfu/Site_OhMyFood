@@ -1,0 +1,33 @@
+// Header
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 14px 0;
+        a{
+            position: relative;
+            left:-42px;
+            font-weight: 800;
+        }
+    }
+    &__location{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: #EAEAEA;
+        i{
+            margin-right: 17px;
+            color: black;
+        }
+    }
+}

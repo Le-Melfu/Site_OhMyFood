@@ -1,0 +1,92 @@
+// Main Index
+.intro {
+    display: flex;
+    flex-direction: column;
+    & > *{
+        margin-bottom: 27px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 15px;
+        .btn {
+            margin-bottom: 17px;
+        }
+    }
+    &__site-function{
+        padding: 48px 20px;
+        background-color: white;
+    }
+    &__function-list{
+        display: flex;
+        justify-content: left;
+        ol{
+            
+            padding-inline-start: 20px;
+            width: 100%;
+            max-width: 500px;
+            list-style-type: none;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            counter-increment: step-counter;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            height: 72px;
+            margin-bottom: 25px;
+            background-color: $main-bg-color;
+            @include shadowbox;
+            &::before{
+                height:15px;
+                content: counter(step-counter);
+                position: relative;
+                left: -15px;
+                font-size: 80%;
+                background-color: $main-color;
+                color: white;
+                font-weight: bold;
+                padding: 6px 10px;
+                border-radius: 16px;
+            }
+        }
+        
+
+        i{
+            padding: 28px;
+        }
+        .fa-store{
+            color: $main-color;
+        }
+        
+    }
+}
+
+// Liste des restaurants
+.restaurant {
+    padding: 40px 25px;
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        height: 251px;
+        img{
+            height: 70%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            height: 65%;
+        }
+        &__text-content{
+            display: flex;
+            flex-wrap: unset;
+            overflow: hidden;
+        }
+    }
+    
+}
