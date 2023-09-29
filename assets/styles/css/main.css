@@ -56,6 +56,7 @@
 }
 .intro__function-list i {
   padding: 28px;
+  color: #7E7E7E;
 }
 .intro__function-list .fa-store {
   color: #9356DC;
@@ -80,7 +81,7 @@
 }
 .restaurant .card__text-content {
   display: flex;
-  flex-wrap: unset;
+  flex-wrap: nowrap;
   overflow: hidden;
 }
 
@@ -145,6 +146,9 @@
   display: flex;
   list-style-type: none;
   margin-bottom: 7px;
+}
+.footer__content li .fa-solid {
+  color: white;
 }
 .footer__content p {
   width: 50%;
@@ -229,6 +233,46 @@
   font-weight: bold;
 }
 
+.btn {
+  transform: scale(1);
+  transition: all ease-in-out 400ms;
+}
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(0.95);
+  box-shadow: 2px 6px 12px 0px rgba(0, 0, 0, 0.5);
+}
+
+.fav-btn {
+  display: block;
+  box-sizing: border-box;
+  justify-content: center;
+  width: fit-content;
+  height: 100%;
+  cursor: pointer;
+}
+.fav-btn i {
+  position: absolute;
+  right: 5%;
+  justify-self: right;
+  width: fit-content;
+  height: 22px;
+  color: #7E7E7E;
+}
+.fav-btn .fa-regular {
+  z-index: -1;
+}
+.fav-btn .fa-solid {
+  z-index: 1;
+  color: red;
+  background-color: none;
+  opacity: 0;
+  transition: opacity ease-in-out 600ms;
+}
+.fav-btn:hover > .fa-solid {
+  opacity: 100;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -246,7 +290,10 @@ main {
 
 .fa-solid, .fa-regular {
   font-size: 22px;
-  color: #7E7E7E;
+}
+
+i {
+  color: none;
 }
 
 a {
@@ -259,6 +306,7 @@ p {
 }
 
 .btn {
+  cursor: pointer;
   width: fit-content;
   padding: 15px;
   margin-top: 27px;

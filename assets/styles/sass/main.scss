@@ -1,5 +1,5 @@
 @import "./general/variables", "./general/mixin", "./pages/index", 
-"./pages/header", "./pages/footer", "./pages/restaurants", "./animations/animations";
+"./pages/header", "./pages/footer", "./pages/restaurants", "./animations/anim-btn", "./animations/anim-pages";
 
 // Général
 *{
@@ -18,7 +18,10 @@ main{
 
 .fa-solid, .fa-regular {
     font-size: 22px;
-    color: $icon-color;
+}
+
+i{
+    color: none;
 }
 
 a {
@@ -31,6 +34,7 @@ p{
 }
 
 .btn {
+    cursor: pointer;
     width: fit-content;
     padding: 15px;
     margin-top: 27px;

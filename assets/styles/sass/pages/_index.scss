@@ -58,7 +58,9 @@
 
         i{
             padding: 28px;
+            color: $icon-color;
         }
+
         .fa-store{
             color: $main-color;
         }
@@ -84,7 +86,7 @@
         }
         &__text-content{
             display: flex;
-            flex-wrap: unset;
+            flex-wrap: nowrap;
             overflow: hidden;
         }
     }

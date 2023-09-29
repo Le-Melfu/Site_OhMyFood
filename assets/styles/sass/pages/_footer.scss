@@ -6,6 +6,7 @@
     *{
         color: white;
     }
+
     &__logo{
         width: fit-content;
         display: flex;
@@ -26,6 +27,9 @@
             display: flex;
             list-style-type: none;
             margin-bottom: 7px;
+            .fa-solid{
+                color: white;
+            }
         }
         p {
             width: 50%;
