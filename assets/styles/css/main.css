@@ -79,11 +79,6 @@
   border-radius: 15px 15px 0 0;
   height: 65%;
 }
-.restaurant .card__text-content {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-}
 
 .header {
   width: 100%;
@@ -218,19 +213,27 @@
 .menu .card {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 15px;
+  justify-content: left;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .menu .card__text-content {
+  display: block;
   width: 100%;
-  display: inline;
+  padding: 15px 5px 15px 15px;
   overflow: hidden;
 }
+.menu .card__text-content > * {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
 .menu .card .price {
-  justify-self: right;
+  display: flex;
+  justify-self: flex-end;
   align-self: flex-end;
   font-weight: bold;
+  padding: 15px 15px 15px 5px;
 }
 
 .btn {
@@ -243,34 +246,61 @@
   box-shadow: 2px 6px 12px 0px rgba(0, 0, 0, 0.5);
 }
 
+.fa-regular {
+  z-index: 0;
+  position: absolute;
+  right: 14px;
+  top: -10px;
+  color: #7E7E7E;
+}
+
 .fav-btn {
-  display: block;
+  position: relative;
   box-sizing: border-box;
-  justify-content: center;
-  width: fit-content;
-  height: 100%;
+  width: 22px;
+  height: auto;
   cursor: pointer;
 }
 .fav-btn i {
   position: absolute;
-  right: 5%;
+  right: 14px;
+  top: -10px;
+  height: auto;
   justify-self: right;
-  width: fit-content;
-  height: 22px;
   color: #7E7E7E;
-}
-.fav-btn .fa-regular {
-  z-index: -1;
+  padding: 0;
+  margin: 0;
 }
 .fav-btn .fa-solid {
   z-index: 1;
-  color: red;
+  color: #9356DC;
   background-color: none;
   opacity: 0;
-  transition: opacity ease-in-out 600ms;
+  transform: scale(0.3);
+  transition: all ease-in-out 600ms;
 }
 .fav-btn:hover > .fa-solid {
   opacity: 100;
+  transform: scale(1);
+}
+
+.menu .menu__checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #99E2D0;
+  font-size: 22px;
+  width: 0;
+  overflow: hidden;
+  border-radius: 0 15px 15px 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all ease-in 250ms;
+}
+.menu .card:hover > .menu__checkmark {
+  transform: scaleX(1);
+  width: 130px;
 }
 
 * {
@@ -294,6 +324,8 @@ main {
 
 i {
   color: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {

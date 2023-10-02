@@ -74,20 +74,28 @@
     .card{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        padding: 15px;
+        justify-content: left;
         @include shadowbox;
 
         &__text-content{
+            display: block;
             width: 100%;
-            display: inline;
+            padding: 15px 5px 15px 15px;
             overflow: hidden;
+            > *{
+                white-space: nowrap;
+                overflow: hidden;
+                display: block;
+                text-overflow: ellipsis;
+            }
         }
         
         .price{
-            justify-self: right;
+            display: flex;
+            justify-self: flex-end;
             align-self: flex-end;
             font-weight: bold;
+            padding: 15px 15px 15px 5px;
         }
     }
 }

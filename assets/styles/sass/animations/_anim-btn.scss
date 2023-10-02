@@ -13,42 +13,70 @@
 
 //Bouton like
 
+.fa-regular{
+    z-index: 0;
+    position: absolute;
+    right: 14px;
+    top: -10px;
+    color: $icon-color;
+}
+
 .fav-btn{
-    display: block;
+    position: relative;
     box-sizing: border-box;
-    justify-content: center;
-    width: fit-content;
-    height: 100%;
+    width: 22px;
+    height: auto;
     cursor: pointer;
     i{
         position: absolute;
-        right: 5%;
+        right: 14px;
+        top: -10px;
+        height: auto;
         justify-self: right;
-        width: fit-content;
-        height: 22px;
         color: $icon-color;
-    }
-
-    .fa-regular{
-        z-index: -1;
+        padding: 0;
+        margin: 0;
     }
 
     .fa-solid{
         z-index: 1;
-        color: red;
+        color: $main-color;
         background-color: none;
         opacity: 0;
-        transition: opacity ease-in-out 600ms;
+        transform: scale(0.3);
+        transition: all ease-in-out 600ms;
     }
 
     &:hover > .fa-solid{
         opacity: 100;
+        transform: scale(1);
     }
     
 }
 
 //Checkmark Menu
+.menu{
+    // content: "✓";
+    .menu__checkmark{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: $third-color;
+        font-size: 22px;
+        width: 0;
+        overflow: hidden;
+        border-radius: 0 15px 15px 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: all ease-in 250ms;
+    }
 
+    .card:hover > .menu__checkmark{
+        transform: scaleX(1);
+        width: 130px;
+    }
+}
 
 
 
