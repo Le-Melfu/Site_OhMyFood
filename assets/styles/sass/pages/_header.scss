@@ -1,5 +1,6 @@
 // Header
 .header{
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -13,7 +14,7 @@
         padding: 14px 0;
         a{
             position: relative;
-            left:-42px;
+            left:-5%;
             font-weight: 800;
         }
     }

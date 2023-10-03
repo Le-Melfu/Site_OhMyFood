@@ -2,6 +2,7 @@
 
 .menu{
     .card{
+        height: 0;
         transform: translateX(200%);
         animation: menu-slideIn 1s;
         animation-delay: 100ms;
@@ -17,9 +18,11 @@
 
 @keyframes menu-slideIn {
     0%{
+        height: 0;
         transform: translateX(200%);
     }
     100%{
+        height: fit-content;
         transform: translateX(0);
     }
 }

@@ -81,6 +81,7 @@
 }
 
 .header {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -96,7 +97,7 @@
 }
 .header__logo a {
   position: relative;
-  left: -42px;
+  left: -5%;
   font-weight: 800;
 }
 .header__location {
@@ -166,6 +167,7 @@
   margin-right: 24px;
 }
 .restaurant__name {
+  width: 341px;
   font-family: Shrikhand;
   font-size: 28px;
   font-weight: 400;
@@ -229,6 +231,11 @@
   overflow: hidden;
   display: block;
   text-overflow: ellipsis;
+}
+.menu .card__text-content p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: lighter;
 }
 .menu .card .price {
   display: flex;
@@ -305,7 +312,7 @@
 }
 
 .index__loader {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
@@ -313,7 +320,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 0;
   background-color: #353535;
   opacity: 40%;
   animation: index-loader;
@@ -321,7 +328,7 @@
 }
 .index__loader p {
   font-family: Shrikhand;
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   animation: index-loader-text;
   animation-duration: 3.1s;
@@ -331,27 +338,34 @@
 
 @keyframes index-loader {
   0%, 100% {
-    display: flex;
+    height: 100%;
   }
   0% {
     opacity: 0%;
   }
-  10%, 90% {
+  5%, 90% {
     opacity: 60%;
   }
   100% {
     opacity: 0%;
+    height: 100%;
   }
 }
 @keyframes index-loader-text {
   0% {
-    transform: translateX(-300%) skewX(30deg);
+    transform: translateX(-500%) skewX(30deg) scaleY(0.8) scaleX(1);
   }
   0% {
+    opacity: 0%;
+  }
+  10% {
+    transform: scaleY(0.8) scaleX(1);
+  }
+  30% {
     opacity: 100%;
   }
   30% {
-    transform: translateX(20px) skewX(-10deg);
+    transform: translateX(20px) skewX(-10deg) scaleY(1.2) scaleX(0.8);
   }
   40% {
     transform: translateX(-20px) skewX(20deg);
@@ -359,23 +373,24 @@
   60% {
     transform: translateX(0) skewX(0deg);
   }
-  90% {
+  80% {
     transform: translateX(-20px) skewX(30deg);
   }
-  95% {
-    transform: translateX(300%);
-  }
-  95% {
+  75% {
     opacity: 100%;
   }
-  100% {
-    transform: translateX(150%) skewX(-30deg);
+  85% {
+    transform: translateX(300%);
+  }
+  90%, 100% {
+    opacity: 0%;
   }
   100% {
-    opacity: 0%;
+    transform: translateX(500%) skewX(-30deg);
   }
 }
 .menu .card {
+  height: 0;
   transform: translateX(200%);
   animation: menu-slideIn 1s;
   animation-delay: 100ms;
@@ -415,9 +430,11 @@
 
 @keyframes menu-slideIn {
   0% {
+    height: 0;
     transform: translateX(200%);
   }
   100% {
+    height: fit-content;
     transform: translateX(0);
   }
 }
