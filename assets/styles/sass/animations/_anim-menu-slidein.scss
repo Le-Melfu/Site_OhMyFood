@@ -1,0 +1,25 @@
+// Slide in des Items du Menu
+
+.menu{
+    .card{
+        transform: translateX(200%);
+        animation: menu-slideIn 1s;
+        animation-delay: 100ms;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        @for $i from 1 through 10{
+            &--#{$i}{
+                animation-delay: $anim-menu-delay * $i;
+            }
+        }
+    }
+}
+
+@keyframes menu-slideIn {
+    0%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
