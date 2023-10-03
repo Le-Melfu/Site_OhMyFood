@@ -1,0 +1,43 @@
+@media (min-width:768px){
+    
+    .intro {
+        
+        &__site-function{
+            width: 70%;
+            margin: auto;
+        }
+        &__function-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            p{
+                width: 30%;
+                margin-left: 0;
+            }
+        }
+    }
+    
+    .restaurant{
+        padding: 40px 180px;
+        max-width: 1440px;
+        &__list{
+            justify-content: space-between;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .card{
+            margin-bottom: 20px;
+        }
+    }
+
+    .restaurant__header{
+        justify-content: center;
+    }
+    .menu {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+}

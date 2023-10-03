@@ -2,7 +2,7 @@
 .intro {
     display: flex;
     flex-direction: column;
-    & > *{
+    & > *:not(:last-child){
         margin-bottom: 27px;
     }
     &__content{
@@ -11,33 +11,37 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 40px 15px;
-        .btn {
-            margin-bottom: 17px;
-        }
+        padding: 0 15px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        background-color: $main-bg-color;
+        
     }
     &__site-function{
-        padding: 48px 20px;
+        padding: 50px 20px;
         background-color: white;
     }
     &__function-list{
         display: flex;
+        flex-direction: column;
         justify-content: left;
-        ol{
-            
-            padding-inline-start: 20px;
-            width: 100%;
-            max-width: 500px;
-            list-style-type: none;
+        i{
+            margin: 28px 10px;
+            color: $icon-color;
         }
-        li{
+        .fa-store{
+            color: $main-color;
+        }
+        p{
             display: flex;
+            justify-content: left;
             align-items: center;
             counter-increment: list-counter;
             font-size: 16px;
             font-weight: bold;
             border-radius: 25px;
             height: 72px;
+            margin-left: 20px;
             margin-bottom: 25px;
             background-color: $main-bg-color;
             @include shadowbox;
@@ -56,21 +60,18 @@
         }
         
 
-        i{
-            padding: 28px;
-            color: $icon-color;
-        }
+        
 
-        .fa-store{
-            color: $main-color;
-        }
         
     }
 }
 
 // Liste des restaurants
 .restaurant {
+    display: flex;
+    flex-direction: column;
     padding: 40px 25px;
+    background-color: $main-bg-color;
     &__list{
         display: flex;
         flex-direction: column;
