@@ -439,7 +439,7 @@
     transform: translateX(0);
   }
 }
-@media (min-width: 767.8px) {
+@media (min-width: 768.1px) {
   .intro__site-function {
     width: 70%;
     margin: auto;
