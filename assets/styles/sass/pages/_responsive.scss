@@ -1,5 +1,11 @@
 @media (min-width:768.1px){
     
+    .index__loader{
+        p{
+            font-size: 22px;
+        }
+    }
+
     .intro {
         
         &__site-function{
@@ -39,5 +45,24 @@
         width: 80%;
         margin: auto;
         padding-bottom: 50px;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: row-reverse;
+        &__content{
+            padding-top: 30px;
+            flex-direction: row-reverse;
+            ul{
+                display: flex;
+                flex-direction: row;
+                margin-top: 6px;
+                margin-right: 30px;
+            }
+            li{
+                margin-right: 15px;
+            }
+        }
+
     }
 }

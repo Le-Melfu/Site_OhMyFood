@@ -147,9 +147,6 @@
 .footer__content li .fa-solid {
   color: white;
 }
-.footer__content p {
-  width: 50%;
-}
 
 .restaurant__header {
   width: 100%;
@@ -344,12 +341,11 @@
   0% {
     opacity: 0%;
   }
-  5%, 90% {
-    opacity: 60%;
+  2%, 90% {
+    opacity: 80%;
   }
   100% {
     opacity: 0%;
-    height: 100%;
   }
 }
 @keyframes index-loader-text {
@@ -440,6 +436,9 @@
   }
 }
 @media (min-width: 768.1px) {
+  .index__loader p {
+    font-size: 22px;
+  }
   .intro__site-function {
     width: 70%;
     margin: auto;
@@ -474,6 +473,23 @@
     width: 80%;
     margin: auto;
     padding-bottom: 50px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .footer__content {
+    padding-top: 30px;
+    flex-direction: row-reverse;
+  }
+  .footer__content ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px;
+    margin-right: 30px;
+  }
+  .footer__content li {
+    margin-right: 15px;
   }
 }
 * {
