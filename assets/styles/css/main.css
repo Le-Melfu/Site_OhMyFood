@@ -355,7 +355,7 @@
   0% {
     opacity: 0%;
   }
-  10% {
+  15% {
     transform: scaleY(0.8) scaleX(1);
   }
   30% {
