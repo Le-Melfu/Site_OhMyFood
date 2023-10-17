@@ -452,10 +452,8 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-  .restaurant .card {
-    margin-bottom: 20px;
+    row-gap: 50px;
+    column-gap: 100px;
   }
   .restaurant__header {
     justify-content: center;
