@@ -244,7 +244,6 @@
 }
 
 .btn {
-  transform: scale(1);
   transition: all ease-in-out 400ms;
 }
 .btn:hover {
@@ -262,27 +261,23 @@
 
 .fav-btn {
   position: relative;
-  box-sizing: border-box;
+  right: 15px;
   width: 22px;
   height: auto;
   cursor: pointer;
 }
 .fav-btn i {
   position: absolute;
-  right: 14px;
+  right: -5px;
   top: -10px;
-  height: auto;
-  justify-self: right;
-  color: #7E7E7E;
   padding: 0;
   margin: 0;
 }
 .fav-btn .fa-solid {
   z-index: 1;
   color: #9356DC;
-  background-color: none;
   opacity: 0;
-  transform: scale(0.3);
+  transform: scale(0);
   transition: all ease-in-out 300ms;
 }
 .fav-btn:hover > .fa-solid {
@@ -296,16 +291,14 @@
   align-items: center;
   color: white;
   background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
   font-size: 22px;
   width: 0;
   overflow: hidden;
-  border-radius: 0 15px 15px 0;
-  transform: scaleX(0);
   transform-origin: right;
   transition: all ease-in 250ms;
 }
 .menu .card:hover > .menu__checkmark {
-  transform: scaleX(1);
   width: 100px;
 }
 
@@ -313,14 +306,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 0;
   background-color: #353535;
-  opacity: 40%;
+  opacity: 0;
   animation: index-loader;
   animation-duration: 3s;
 }
@@ -330,7 +323,7 @@
   color: white;
   animation: index-loader-text;
   animation-duration: 3.1s;
-  transform: translateX(-300%) skewX(0deg);
+  transform: translateX(-300%);
   opacity: 0%;
 }
 
@@ -390,9 +383,7 @@
   height: 0;
   transform: translateX(200%);
   animation: menu-slideIn 1s;
-  animation-delay: 100ms;
   animation-fill-mode: forwards;
-  animation-iteration-count: 1;
 }
 .menu .card--1 {
   animation-delay: 150ms;
@@ -514,7 +505,6 @@ main {
 }
 
 i {
-  color: none;
   padding: 0;
   margin: 0;
 }
