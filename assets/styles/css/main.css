@@ -109,7 +109,6 @@
   align-items: center;
   flex-direction: row;
   background-color: #EAEAEA;
-  box-shadow: inset 3px 0px 0px 0px #000000;
 }
 .header__location i {
   margin-right: 17px;
